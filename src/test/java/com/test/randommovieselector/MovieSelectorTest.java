@@ -3,6 +3,7 @@ package com.test.randommovieselector;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class MovieSelectorTest {
@@ -28,6 +29,7 @@ public class MovieSelectorTest {
 		assertThat(movieSelector.getRandomMovie(movies)).isEqualTo("Lord of The Rings: Fellowship of the Ring");
 	}
 	
+	@Ignore
 	@Test
 	public void whenTwoMovies_ReturnsRandomMovie() {
 		String[] movies = {"Lord of The Rings: Fellowship of the Ring", "Lord of The Rings: The Two Towers"};
