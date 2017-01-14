@@ -7,7 +7,7 @@ public class MovieSelector {
 			return "Error: No movies found";
 		}
 		
-		int randomNumber = generateRandomNumber(2);
+		int randomNumber = new RandomNumberGenerator().generate(2);
 		String result = movies[randomNumber];
 		
 		return result;
