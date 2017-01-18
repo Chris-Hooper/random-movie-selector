@@ -1,4 +1,4 @@
-package com.test.randommovieselector;
+package com.randommovieselector;
 
 public class RandomNumberGenerator {
 	

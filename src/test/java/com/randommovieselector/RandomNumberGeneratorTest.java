@@ -1,4 +1,4 @@
-package com.test.randommovieselector;
+package com.randommovieselector;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -8,6 +8,8 @@ import java.util.Random;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.randommovieselector.RandomNumberGenerator;
 
 
 public class RandomNumberGeneratorTest {
@@ -25,7 +27,16 @@ public class RandomNumberGeneratorTest {
 	}
 	
 	@Test
-	public void whenRangeIsOne_CanReturnEitherZeroOrOne_ButEnsuresItReturnsBothOverIterations() {
+	public void whenRangeIsOne_ReturnsEitherZeroOrOne() {
+		List<Integer> validReturns = Arrays.asList(0, 1);
+		
+		int actual = generator.generateNumberFromZeroTo(1);
+		
+		assertThat(validReturns.contains(actual)).isTrue();
+	}
+	
+	@Test
+	public void whenRangeIsOne_ReturnsBothZeroAndOneOverOneHundredIterations() {
 		boolean wasOne = false;
 		boolean wasZero = false;
 		
