@@ -11,8 +11,7 @@ public class MovieDatabase {
 		movies.add(movieTitle);
 	}
 
-	public List<String> getMovies() {
-		return movies;
+	public String[] getMovies() {
+		return movies.stream().toArray(String[]::new);
 	}
-
 }

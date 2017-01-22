@@ -9,9 +9,8 @@ public class Main {
 		db.addMovie("Ocean's Thirteen");
 		MovieSelector movieSelector = new MovieSelector();
 		
-		for (int i = 0; i < 9; i++) {
-			String[] movies = db.getMovies().stream().toArray(String[]::new);
-			System.out.println("Random movie = " + movieSelector.getRandomMovie(movies));
+		for (int i = 0; i < 10; i++) {
+			System.out.println("Random movie = " + movieSelector.getRandomMovie(db.getMovies()));
 		}
 	}
 }
