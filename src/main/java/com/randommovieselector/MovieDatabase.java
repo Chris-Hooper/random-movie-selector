@@ -11,6 +11,10 @@ public class MovieDatabase {
 		movies.add(movieTitle);
 	}
 
+	public void removeMovie(String movieTitle) {
+		movies.remove(movieTitle);
+	}
+
 	public String[] getMovies() {
 		return movies.stream().toArray(String[]::new);
 	}
