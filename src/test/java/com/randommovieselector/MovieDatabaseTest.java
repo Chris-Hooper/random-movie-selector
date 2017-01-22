@@ -14,9 +14,8 @@ public class MovieDatabaseTest {
 	@Test
 	public void canAddMovie() {
 		MovieDatabase db = new MovieDatabase();
-		
-		
-		List<String> moviesBlah = new ArrayList<>("Lord of The Rings: Fellowship of the Ring");
+		List<String> moviesBlah = Arrays.asList(new String[] {"Lord of The Rings: Fellowship of the Ring"});
+
 		db.addMovie("Lord of The Rings: Fellowship of the Ring");
 		
 		assertThat(db.getMovies()).isEqualTo(Arrays.asList(new String[] {"Lord of The Rings: Fellowship of the Ring"}));
